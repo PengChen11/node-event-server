@@ -7,9 +7,9 @@ function start(){
 
     let order = {
       store: '1-206-flowers',
-      orderID: Math.floor(Math.random*1000000),
+      orderID: faker.random.number(),
       customer: `${faker.name.firstName()} ${faker.name.lastName()}`,
-      address: faker.address.streetAddress(),
+      address: `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()}, ${faker.address.zipCode()} } `,
     };
     emitter.emit('pickup', order);
 
