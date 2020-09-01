@@ -1,29 +1,17 @@
 'use strict';
 const events = require('./lib/events');
 
-events.on('pickup', pickupHandler);
-events.on('in-transit', transitHandler);
-events.on('delivered', deliveredHandler);
+events.on('pickup', eventHandler('pickup'));
+events.on('in-transit', eventHandler('in-transit'));
+events.on('delivered', eventHandler('delivered'));
 
-function pickupHandler(order){
-  const time = new Date();
+function eventHandler(eventName){
 
-  console.log('EVENT', {event: 'pickup', time, order});
+  return order=>{
+
+    const time = new Date();
+
+    console.log('EVENT', {event: eventName, time, order});
+  };
+
 }
-
-
-function transitHandler(order){
-  const time = new Date();
-
-  console.log('EVENT', {event: 'in-transit', time, order});
-}
-
-function deliveredHandler(order){
-  const time = new Date();
-
-  console.log('EVENT', {event: 'delivered', time, order});
-}
-
-// events.emit('pickup', {id: 'bahaha', ohoh: 'ohoh'});
-// events.emit('in-transit', {id: 'bahaha', ohoh: 'ohoh'});
-// events.emit('delivered', {id: 'bahaha', ohoh: 'ohoh'});
