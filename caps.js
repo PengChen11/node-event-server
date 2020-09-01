@@ -1,5 +1,6 @@
 'use strict';
 const events = require('./lib/events');
+const vendor = require('./apps/vendor');
 
 events.on('pickup', eventHandler('pickup'));
 events.on('in-transit', eventHandler('in-transit'));
@@ -15,3 +16,5 @@ function eventHandler(eventName){
   };
 
 }
+
+vendor.start();
