@@ -2,7 +2,7 @@
   "name": "node-event-server",
   "version": "1.0.0",
   "description": "",
-  "main": "jest.config.js",
+  "main": "caps.js",
   "scripts": {
     "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage"
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/PengChen11/node-event-server#readme",
   "devDependencies": {
+    "faker": "^5.1.0",
     "jest": "^26.4.2"
   }
 }

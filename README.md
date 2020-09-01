@@ -61,7 +61,7 @@ There will be no data persistence. However, because one of our requirements is t
 
 A suggestion is to have a map, keyed by the customer id, and then within that, a set of messages, keyed by the event. For Example:
 
-```json
+```javascript
 messageQueue: {
   'Flower Shop': {
     'in-transit': {
