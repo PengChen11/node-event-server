@@ -17,16 +17,12 @@ emitter.on('pickup', onPickup);
 function onPickup(order) {
   // wait 1 second
   setTimeout(() => {
-    // what after 1 second
-
     // Log “DRIVER: picked up [ORDER_ID]” to the console.
-    // Emit an ‘in-transit’ event with the payload you received
     console.log(`DRIVER: picked up ${order.orderID}`);
+    // Emit an ‘in-transit’ event with the payload you received
     emitter.emit('in-transit', order);
 
   }, 1000);
-
-  // also after 3 seconds do something
 }
 
 emitter.on('in-transit', inTransit);
