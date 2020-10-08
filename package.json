@@ -21,5 +21,9 @@
   "devDependencies": {
     "faker": "^5.1.0",
     "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
   }
 }
