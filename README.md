@@ -6,7 +6,9 @@ A real-time service that allows for vendors, such as flower shops or restaurants
 
 [Click here to see phase-1 document.](phase_docs/1.md);
 
-[Click here to see phase-2 document.](phase_docs/2.md)
+[Click here to see phase-2 document.](phase_docs/2.md);
+
+[Click here to see phase-3 document.](phase_docs/3.md)
 
 ## Business Requirements
 
